@@ -1,0 +1,273 @@
+import type { Patient } from '~/types'
+
+export const patients: Patient[] = [
+  {
+    id: '1',
+    carteirinha: 'HSP-2024-001982',
+    nome: 'Maria Helena Russo',
+    cpf: '458.782.910-23',
+    dataNascimento: '14/07/1969',
+    idade: 55,
+    sexo: 'Feminino',
+    convenio: 'Amil Saúde',
+    plano: 'Platinum',
+    avatarIniciais: 'MR',
+    status: 'ativo',
+    telefone: '(11) 98765-4321',
+    email: 'maria.russo@email.com',
+    endereco: 'Av. Paulista, 1200 — São Paulo, SP',
+    medicoResponsavel: 'Dra. Fernanda Lemos',
+    tipoSanguineo: 'A+',
+    fatorRh: 'Positivo',
+    sidAlergia: 'BR-ALRG-PNC-001982',
+    ultimoAtendimento: '18/05/2026',
+    alergias: [
+      { id: 'a1', nome: 'PENICILINA', reacao: 'Anafilaxia', cid: 'T78.0', severidade: 'critica' },
+      { id: 'a2', nome: 'CAMARÃO / CRUSTÁCEOS', reacao: 'Urticária + Edema', cid: 'T78.1', severidade: 'critica' },
+    ],
+    condicoes: [
+      { id: 'c1', nome: 'Hipertensão Arterial Sistêmica', cid: 'I10', anoDiagnostico: 2015, status: 'controlada' },
+      { id: 'c2', nome: 'Asma Brônquica Leve', cid: 'J45.0', anoDiagnostico: 2010, status: 'monitoramento' },
+    ],
+    medicamentos: [
+      { id: 'm1', nome: 'Losartana', dosagem: '50mg', frequencia: '1x ao dia', categoria: 'Anti-hipertensivo' },
+      { id: 'm2', nome: 'Salbutamol Spray', dosagem: '100mcg', frequencia: 'SOS', categoria: 'Broncodilatador' },
+    ],
+    vacinas: [
+      { id: 'v1', nome: 'Influenza', data: '15/04/2026', proximaDose: '15/04/2027', status: 'em_dia' },
+      { id: 'v2', nome: 'COVID-19', data: '10/01/2026', status: 'em_dia' },
+      { id: 'v3', nome: 'Dupla Adulto', data: '20/08/2025', proximaDose: '20/08/2035', status: 'em_dia' },
+      { id: 'v4', nome: 'Herpes Zóster', data: '—', proximaDose: 'Agendar', status: 'pendente' },
+    ],
+    sinaisVitais: {
+      pressao: '12 x 8',
+      pressaoStatus: 'Normal',
+      pulso: 72,
+      pulsoStatus: 'Regular',
+      temperatura: 36.5,
+      temperaturaStatus: 'Leve Febre',
+      spo2: 98,
+      spo2Status: 'Ótimo',
+      atualizadoEm: '18/05/2026 14:32',
+    },
+    contatosEmergencia: [
+      { id: 'e1', nome: 'João Carlos Russo', parentesco: 'Cônjuge', telefone: '(11) 91234-5678', prioridade: 'principal' },
+      { id: 'e2', nome: 'Ana Paula Russo', parentesco: 'Filha', telefone: '(11) 99876-5432', prioridade: 'secundario' },
+    ],
+    atendimentos: [
+      { id: 'at1', data: '18/05/2026', hora: '14:30', especialidade: 'Clínico Geral', medico: 'Dr. Ricardo Alves', notas: 'Retorno de rotina. PA controlada.', tipo: 'consulta', status: 'concluido' },
+      { id: 'at2', data: '05/05/2026', hora: '09:00', especialidade: 'Enfermagem', medico: 'Enf. Carla Mendes', notas: 'Aferição de sinais vitais e vacina Influenza.', tipo: 'consulta', status: 'concluido' },
+      { id: 'at3', data: '22/04/2026', hora: '11:15', especialidade: 'Cardiologia', medico: 'Dra. Fernanda Lemos', notas: 'ECG normal. Manter Losartana.', tipo: 'retorno', status: 'concluido' },
+    ],
+    exames: [
+      { id: 'ex1', nome: 'Hemograma Completo', data: '18/05/2026', resultado: 'Normal', status: 'concluido', laboratorio: 'Lab Central' },
+      { id: 'ex2', nome: 'ECG', data: '22/04/2026', resultado: 'Ritmo sinusal normal', status: 'concluido', laboratorio: 'CardioLab' },
+      { id: 'ex3', nome: 'Glicemia em Jejum', data: '10/05/2026', status: 'pendente', laboratorio: 'Lab Central' },
+    ],
+    receitas: [
+      { id: 'r1', medicamento: 'Losartana 50mg', dosagem: '1 comprimido/dia', medico: 'Dra. Fernanda Lemos', data: '22/04/2026', validade: '22/10/2026' },
+      { id: 'r2', medicamento: 'Salbutamol Spray', dosagem: '2 jatos SOS', medico: 'Dr. Ricardo Alves', data: '18/05/2026', validade: '18/11/2026' },
+    ],
+  },
+  {
+    id: '2',
+    carteirinha: 'HSP-2024-002145',
+    nome: 'Carlos Eduardo Mendes',
+    cpf: '321.654.987-00',
+    dataNascimento: '22/03/1982',
+    idade: 44,
+    sexo: 'Masculino',
+    convenio: 'Unimed',
+    plano: 'Essencial',
+    avatarIniciais: 'CM',
+    status: 'em_atendimento',
+    telefone: '(11) 97654-3210',
+    medicoResponsavel: 'Dr. Paulo Santos',
+    tipoSanguineo: 'O+',
+    fatorRh: 'Positivo',
+    ultimoAtendimento: '22/05/2026',
+    alergias: [
+      { id: 'a3', nome: 'DIPIRONA', reacao: 'Rash cutâneo', cid: 'L27.0', severidade: 'moderada' },
+    ],
+    condicoes: [
+      { id: 'c3', nome: 'Diabetes Mellitus Tipo 2', cid: 'E11', anoDiagnostico: 2018, status: 'controlada' },
+    ],
+    medicamentos: [
+      { id: 'm3', nome: 'Metformina', dosagem: '850mg', frequencia: '2x ao dia', categoria: 'Antidiabético' },
+    ],
+    vacinas: [
+      { id: 'v5', nome: 'Hepatite B', data: '01/02/2026', status: 'em_dia' },
+      { id: 'v6', nome: 'COVID-19', data: '—', proximaDose: 'Agendar', status: 'pendente' },
+    ],
+    sinaisVitais: {
+      pressao: '14 x 9',
+      pressaoStatus: 'Elevada',
+      pulso: 88,
+      pulsoStatus: 'Regular',
+      temperatura: 37.1,
+      temperaturaStatus: 'Normal',
+      spo2: 97,
+      spo2Status: 'Bom',
+      atualizadoEm: '22/05/2026 10:15',
+    },
+    contatosEmergencia: [
+      { id: 'e3', nome: 'Lucia Mendes', parentesco: 'Esposa', telefone: '(11) 96543-2109', prioridade: 'principal' },
+    ],
+    atendimentos: [
+      { id: 'at4', data: '22/05/2026', hora: '10:00', especialidade: 'Endocrinologia', medico: 'Dr. Paulo Santos', notas: 'Ajuste de medicação.', tipo: 'consulta', status: 'confirmado' },
+    ],
+    exames: [
+      { id: 'ex4', nome: 'HbA1c', data: '22/05/2026', status: 'em_analise', laboratorio: 'Lab Central' },
+    ],
+    receitas: [
+      { id: 'r3', medicamento: 'Metformina 850mg', dosagem: '1 comprimido 2x/dia', medico: 'Dr. Paulo Santos', data: '22/05/2026', validade: '22/11/2026' },
+    ],
+  },
+  {
+    id: '3',
+    carteirinha: 'HSP-2024-003087',
+    nome: 'Ana Beatriz Oliveira',
+    cpf: '987.654.321-11',
+    dataNascimento: '08/11/1995',
+    idade: 30,
+    sexo: 'Feminino',
+    convenio: 'Bradesco Saúde',
+    avatarIniciais: 'AO',
+    status: 'ativo',
+    telefone: '(21) 98888-7777',
+    medicoResponsavel: 'Dra. Juliana Costa',
+    tipoSanguineo: 'B-',
+    fatorRh: 'Negativo',
+    ultimoAtendimento: '15/05/2026',
+    alergias: [],
+    condicoes: [],
+    medicamentos: [],
+    vacinas: [
+      { id: 'v7', nome: 'HPV', data: '10/03/2026', status: 'em_dia' },
+    ],
+    sinaisVitais: {
+      pressao: '11 x 7',
+      pressaoStatus: 'Normal',
+      pulso: 68,
+      pulsoStatus: 'Regular',
+      temperatura: 36.2,
+      temperaturaStatus: 'Normal',
+      spo2: 99,
+      spo2Status: 'Ótimo',
+      atualizadoEm: '15/05/2026 16:00',
+    },
+    contatosEmergencia: [
+      { id: 'e4', nome: 'Roberto Oliveira', parentesco: 'Pai', telefone: '(21) 97777-6666', prioridade: 'principal' },
+    ],
+    atendimentos: [
+      { id: 'at5', data: '15/05/2026', hora: '16:00', especialidade: 'Ginecologia', medico: 'Dra. Juliana Costa', notas: 'Check-up anual.', tipo: 'consulta', status: 'concluido' },
+    ],
+    exames: [],
+    receitas: [],
+  },
+  {
+    id: '4',
+    carteirinha: 'HSP-2024-004521',
+    nome: 'Roberto Ferreira Lima',
+    cpf: '111.222.333-44',
+    dataNascimento: '30/01/1958',
+    idade: 68,
+    sexo: 'Masculino',
+    convenio: 'SulAmérica',
+    avatarIniciais: 'RL',
+    status: 'internado',
+    telefone: '(11) 95555-4444',
+    medicoResponsavel: 'Dr. Marcos Vieira',
+    tipoSanguineo: 'AB+',
+    fatorRh: 'Positivo',
+    ultimoAtendimento: '21/05/2026',
+    alergias: [
+      { id: 'a4', nome: 'CONTRASTE IODADO', reacao: 'Broncoespasmo', cid: 'T80.5', severidade: 'critica' },
+    ],
+    condicoes: [
+      { id: 'c4', nome: 'Insuficiência Cardíaca', cid: 'I50', anoDiagnostico: 2020, status: 'ativa' },
+      { id: 'c5', nome: 'DPOC', cid: 'J44', anoDiagnostico: 2012, status: 'monitoramento' },
+    ],
+    medicamentos: [
+      { id: 'm4', nome: 'Furosemida', dosagem: '40mg', frequencia: '1x ao dia', categoria: 'Diurético' },
+      { id: 'm5', nome: 'Carvedilol', dosagem: '12.5mg', frequencia: '2x ao dia', categoria: 'Beta-bloqueador' },
+    ],
+    vacinas: [
+      { id: 'v8', nome: 'Pneumocócica', data: '05/09/2025', status: 'em_dia' },
+    ],
+    sinaisVitais: {
+      pressao: '10 x 6',
+      pressaoStatus: 'Baixa',
+      pulso: 95,
+      pulsoStatus: 'Irregular',
+      temperatura: 37.8,
+      temperaturaStatus: 'Febre',
+      spo2: 92,
+      spo2Status: 'Atenção',
+      atualizadoEm: '22/05/2026 08:00',
+    },
+    contatosEmergencia: [
+      { id: 'e5', nome: 'Fernanda Lima', parentesco: 'Filha', telefone: '(11) 94444-3333', prioridade: 'principal' },
+    ],
+    atendimentos: [
+      { id: 'at6', data: '21/05/2026', hora: '08:00', especialidade: 'Cardiologia', medico: 'Dr. Marcos Vieira', notas: 'Internação por descompensação.', tipo: 'emergencia', status: 'concluido' },
+    ],
+    exames: [
+      { id: 'ex5', nome: 'Raio-X Tórax', data: '21/05/2026', resultado: 'Congestão pulmonar leve', status: 'concluido' },
+      { id: 'ex6', nome: 'BNP', data: '22/05/2026', status: 'em_analise' },
+    ],
+    receitas: [],
+  },
+  {
+    id: '5',
+    carteirinha: 'HSP-2024-005890',
+    nome: 'Fernanda Costa Silva',
+    cpf: '555.666.777-88',
+    dataNascimento: '12/05/1990',
+    idade: 36,
+    sexo: 'Feminino',
+    convenio: 'NotreDame Intermédica',
+    avatarIniciais: 'FS',
+    status: 'ativo',
+    telefone: '(11) 93333-2222',
+    tipoSanguineo: 'A-',
+    fatorRh: 'Negativo',
+    ultimoAtendimento: '10/05/2026',
+    alergias: [],
+    condicoes: [
+      { id: 'c6', nome: 'Hipotireoidismo', cid: 'E03', anoDiagnostico: 2019, status: 'controlada' },
+    ],
+    medicamentos: [
+      { id: 'm6', nome: 'Levotiroxina', dosagem: '75mcg', frequencia: '1x ao dia em jejum', categoria: 'Hormônio' },
+    ],
+    vacinas: [
+      { id: 'v9', nome: 'Influenza', data: '20/04/2026', status: 'em_dia' },
+    ],
+    sinaisVitais: {
+      pressao: '12 x 8',
+      pressaoStatus: 'Normal',
+      pulso: 70,
+      pulsoStatus: 'Regular',
+      temperatura: 36.4,
+      temperaturaStatus: 'Normal',
+      spo2: 98,
+      spo2Status: 'Ótimo',
+      atualizadoEm: '10/05/2026 11:00',
+    },
+    contatosEmergencia: [
+      { id: 'e6', nome: 'Pedro Silva', parentesco: 'Marido', telefone: '(11) 92222-1111', prioridade: 'principal' },
+    ],
+    atendimentos: [],
+    exames: [],
+    receitas: [],
+  },
+]
+
+export function getPatientById(id: string): Patient | undefined {
+  return patients.find((p) => p.id === id)
+}
+
+export function getPatientByCarteirinha(carteirinha: string): Patient | undefined {
+  const normalized = carteirinha.trim().toUpperCase()
+  return patients.find((p) => p.carteirinha.toUpperCase() === normalized)
+}
